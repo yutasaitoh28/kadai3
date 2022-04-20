@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(85, 85, 85, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/pexels-alexey-demidov-11051756.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.wrapper .date {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 0.99rem;
+    font-weight: 800;
+}
+.wrapper .date span {
+    color: yellow;
+    margin-left: 2px;
+}
+.wrapper .heading {
+    position: relative;
+    font-size: 3.5rem;
+    color: yellow;
+    font-weight: 800;
+}
+.wrapper .todo {
+    position: relative;
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.wrapper .todo .addToDo {
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+.wrapper .todo .addToDo form {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.wrapper .todo .addToDo form input {
+    position: relative;
+    height: 100%;
+}
+.wrapper .todo .addToDo form input[type="text"] {
+    width: 85%;
+    border: 0;
+    border-bottom: 2px solid white;
+    padding: 15px 10px;
+    background: transparent;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+}
+.wrapper .todo .addToDo form input[type="text"]::placeholder {
+    color: white;
+}
+.wrapper .todo .addToDo form input[type="text"]:hover::placeholder,
+.wrapper .todo .addToDo form input[type="text"]:focus::placeholder {
+    color: #ccc;
+}
+.wrapper .todo .addToDo form input[type="submit"] {
+    width: 10%;
+    cursor: pointer;
+    color: white;
+    border: 1px solid #017bf5f5;
+    background: #017bf5f5;
+    font-size: 1rem;
+    font-weight: 550;
+}
+.wrapper .todo .addToDo form input[type="submit"]:hover {
+    background: #017bf5;
+}
+.wrapper .todo .list {
+    margin-top: 10px;
+    position: relative;
+    height: 400px;
+    width: 95%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .todo .list .item {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2px 0;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.9);
+}
+.wrapper .todo .list .item p {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: yellow;
+    line-height: 1rem;
+}
+.wrapper .todo .list .item input {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid white;
+    outline: none;
+}
+.wrapper .todo .list .item input::before {
+    position: absolute;
+    content: '';
+    top: -55%;
+    left: 60%;
+    width: 3px;
+    height: 120%;
+    background: #ff0;
+    transform: rotate(20deg);
+}
+.wrapper .todo .list .item input::before {
+    position: absolute;
+    content: '';
+    top: -55%;
+    left: 60%;
+    width: 3px;
+    height: 150%;
+    background: #ff0;
+    transform: rotate(25deg);
+    display: none;
+}
+.wrapper .todo .list .item input::after {
+    position: absolute;
+    content: '';
+    top: 15%;
+    left: 0;
+    width: 3px;
+    height: 80%;
+    background: #ff0;
+    transform: rotate(-45deg);
+    display: none;
+}
+.wrapper .todo .list .item input:checked::before,
+.wrapper .todo .list .item input:checked::after {
+    display: block;
+}
+
+
